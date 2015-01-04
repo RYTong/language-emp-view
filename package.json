@@ -1,20 +1,19 @@
 {
   "name": "language-emp-view",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Emp View support in Atom",
   "activationCommands": {
     "atom-workspace": "language-emp-view:toggle"
   },
-  "repository":  {
+  "repository": {
     "type": "git",
     "url": "https://github.com/RYTong/language-emp-view.git"
-    },
+  },
   "license": "MIT",
   "engines": {
     "atom": "*",
     "node": "*"
   },
-
   "maintainers": [
     {
       "name": "Ju Chao",
@@ -22,7 +21,6 @@
     }
   ],
   "author": "Ju chao <cqjcrom@gmail.com>",
-
   "bugs": {
     "url": "https://github.com/RYTong/language-emp-view/issues"
   },
