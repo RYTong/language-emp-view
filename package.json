@@ -1,0 +1,23 @@
+{
+  "name": "language-emp-view",
+  "version": "0.0.0",
+  "description": "Emp View support in Atom",
+  "activationCommands": {
+    "atom-workspace": "language-emp-view:toggle"
+  },
+  "repository":  {
+    "type": "git",
+    "url": "https://github.com/atom/language-emp-view.git"
+    },
+  "license": "MIT",
+  "engines": {
+    "atom": "*",
+    "node": "*"
+  },
+  "bugs": {
+    "url": "https://github.com/atom/language-emp-view/issues"
+  },
+  "packageDependencies": {
+    "language-lua": "*"
+  }
+}
