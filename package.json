@@ -24,7 +24,8 @@
   "bugs": {
     "url": "https://github.com/RYTong/language-emp-view/issues"
   },
-  "packageDependencies": {
-    "language-lua": "*"
+  "packageDependencies":{
+    "language-lua":"git+https://github.com/FireZenk/language-lua.git"
   }
+
 }
