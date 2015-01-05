@@ -1,6 +1,6 @@
 {
   "name": "language-emp-view",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Emp View support in Atom",
   "activationCommands": {
     "atom-workspace": "language-emp-view:toggle"
@@ -24,8 +24,7 @@
   "bugs": {
     "url": "https://github.com/RYTong/language-emp-view/issues"
   },
-  "packageDependencies":{
-    "language-lua":"git+https://github.com/FireZenk/language-lua.git"
+  "packageDependencies": {
+    "language-lua": "git+https://github.com/FireZenk/language-lua.git"
   }
-
 }
