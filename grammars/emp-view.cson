@@ -10,7 +10,7 @@
   'cs'
 ]
 'firstLineMatch': '<(?i:(!DOCTYPE\\s*)?html)'
-'name': 'HTML'
+'name': 'Emp View'
 'patterns': [
   {
     'begin': '(<)([a-zA-Z0-9:-]++)(?=[^>]*></\\2>)'
