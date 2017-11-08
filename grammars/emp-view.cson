@@ -1,12 +1,12 @@
-'scopeName': 'text.html.basic'
+'scopeName': 'source.emp'
 'fileTypes': [
+  'xhtml'
   'htm'
   'html'
   'kit'
   'shtml'
   'tmpl'
   'tpl'
-  'xhtml'
   'cs'
 ]
 'firstLineMatch': '<(?i:(!DOCTYPE\\s*)?html)'
@@ -19,7 +19,7 @@
         'name': 'punctuation.definition.tag.html'
       '2':
         'name': 'entity.name.tag.html'
-    'end': '(>(<)/)(\\2)(>)'
+    'end': '(>(\\s*<)/)(\\2)(>)'
     'endCaptures':
       '1':
         'name': 'punctuation.definition.tag.html'
@@ -66,7 +66,7 @@
     'name': 'comment.block.html'
     'patterns': [
       {
-        'match': '--'
+        'match': '--(?!-*\\s*>)'
         'name': 'invalid.illegal.bad-comments-or-CDATA.html'
       }
       {
@@ -168,7 +168,7 @@
         'end': '(</)((?i:script))'
         'patterns': [
           {
-            'include': 'text.html.basic'
+            'include': 'source.emp'
           }
         ]
       }
@@ -390,6 +390,9 @@
       {
         'include': '#lua'
       }
+      {
+        'include': '#slt2'
+      }
     ]
   'entities':
     'patterns': [
@@ -411,6 +414,15 @@
     'begin': '(?:^\\s*)<\\?lua(?!.*\\?>)'
     'end': '\\?>(?:\\s*$\\n)?'
     'name': 'source.lua.embedded.html'
+    'patterns': [
+      {
+        'include': 'source.lua'
+      }
+    ]
+  'slt2':
+    'begin': '#\{'
+    'end': '\}#'
+    'name': 'source.slt2.embedded.html'
     'patterns': [
       {
         'include': 'source.lua'
