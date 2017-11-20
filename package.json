@@ -1,6 +1,6 @@
 {
   "name": "language-emp-view",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Emp View support in Atom",
   "activationCommands": {
     "atom-workspace": "language-emp-view:toggle"
