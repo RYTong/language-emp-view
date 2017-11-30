@@ -509,7 +509,7 @@
   'slt2':
     'begin': '#\\{'
     'end': '\\}#'
-    'name': 'source.slt2.embedded.html'
+    'name': 'source.lua.embedded.html.slt2'
     'patterns': [
       {
         'include': 'source.lua'
