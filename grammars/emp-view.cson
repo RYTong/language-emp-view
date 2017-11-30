@@ -288,8 +288,16 @@
             'captures':
               '1':
                 'name': 'punctuation.definition.comment.lua'
-            'match': '(#).*?((?=</script)|$\\n?)'
-            'name': 'comment.line.number-sign.lua'
+            'match': '(--).*?((?=</script)|$\\n?)'
+            'name': 'comment.line.double-dash.lua'
+          }
+          {
+            'begin': '--\\[(=*)\\['
+            'captures':
+              '0':
+                'name': 'punctuation.definition.comment.lua'
+            'end': '\\]\\1\\]'
+            'name': 'comment.block.lua'
           }
           {
             'include': 'source.lua'
@@ -298,6 +306,40 @@
       }
     ]
   }
+
+  {
+    'begin': '#{'
+    'beginCaptures':
+      '1':
+        'name': 'punctuation.definition.tag.html'
+    'end': '}#'
+    'endCaptures':
+      '1':
+        'name': 'punctuation.definition.tag.html'
+    'name': 'source.lua.embedded.html.slt2'
+    'patterns': [
+      {
+        'include': 'source.lua'
+      }
+      {
+        'captures':
+          '1':
+            'name': 'punctuation.definition.comment.lua'
+        'match': '(--).*?((?=</script)|$\\n?)'
+        'name': 'comment.line.double-dash.lua'
+      }
+      {
+        'begin': '--\\[(=*)\\['
+        'captures':
+          '0':
+            'name': 'punctuation.definition.comment.lua'
+        'end': '\\]\\1\\]'
+        'name': 'comment.block.lua'
+      }
+
+    ]
+  }
+
 
   {
     'begin': '(?:^\\s+)?(<)((?i:script))\\b(?![^>]*/>)'
@@ -456,8 +498,8 @@
       }
     ]
   'lua':
-    'begin': '(?:^\\s*)<\\?lua(?!.*\\?>)'
-    'end': '\\?>(?:\\s*$\\n)?'
+    'begin': '\\[CDATA\\['
+    'end': ']](?=>)'
     'name': 'source.lua.embedded.html'
     'patterns': [
       {
@@ -465,8 +507,8 @@
       }
     ]
   'slt2':
-    'begin': '#\{'
-    'end': '\}#'
+    'begin': '#\\{'
+    'end': '\\}#'
     'name': 'source.slt2.embedded.html'
     'patterns': [
       {
