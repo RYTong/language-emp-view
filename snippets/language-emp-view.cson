@@ -180,6 +180,12 @@
     'body': '<richtext class ="${1:richtext}" name ="${2:richtext}">\n\t<![CDATA[\n\t$\n\t]]>\n</richtext>$0'
 
   # S
+  'SLT2':
+    'prefix': 'slt2'
+    'body': '#{${0}}#'
+  'SLT2if':
+    'prefix': 'sif'
+    'body': '#{if ${0:flag} then}#\n${1}\n#{else}#\n${2}\n#{end}#\n'
   'Submit':
     'prefix': 'submit'
     'body': '<input type="submit" class="${1:class}" border=\'${2:0}\' ${3:delay=\'${4:10}\'}  ${5:leftimg=\'${6:btn_back.png}\'}  name="${7:submit}" value="${8:提交}"></input>$0'

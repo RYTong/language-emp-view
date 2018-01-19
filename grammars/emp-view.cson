@@ -270,7 +270,7 @@
     'endCaptures':
       '2':
         'name': 'punctuation.definition.tag.html'
-    'name': 'source.lua.embedded.html'
+    'name': 'meta.tag.script.html'
     'patterns': [
       {
         'include': '#tag-stuff'
@@ -285,22 +285,14 @@
         'end': '(</)((?i:script))'
         'patterns': [
           {
-            'captures':
-              '1':
-                'name': 'punctuation.definition.comment.lua'
-            'match': '(--).*?((?=</script)|$\\n?)'
-            'name': 'comment.line.double-dash.lua'
-          }
-          {
-            'begin': '--\\[(=*)\\['
-            'captures':
-              '0':
-                'name': 'punctuation.definition.comment.lua'
-            'end': '\\]\\1\\]'
-            'name': 'comment.block.lua'
-          }
-          {
-            'include': 'source.lua'
+            'begin': '\\[CDATA\\['
+            'end': ']](?=>)'
+            'name': 'source.lua.embedded.html'
+            'patterns': [
+              {
+                'include': 'source.lua'
+              }
+            ]
           }
         ]
       }
